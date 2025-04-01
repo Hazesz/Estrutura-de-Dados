@@ -1,17 +1,16 @@
 #include <iostream>
 
 int main(){
-    int mA[2][2] = {2,2,2,2};
+    int mA[2][2] = {1,2,3,4};
     int mB[2][2] = {2,2,2,2};
     int mR[2][2] = {0};
 
     for(int i = 0; i < 2; i++){
         for(int c = 0; c < 2; c++){
-            for(int k = 0; k < 2; k++){
-            mR[i][c] += mA[i][k] * mB[k][c];
+            mR[i][c] += mA[i][c] * mB[i][c];
         }
     }
-}
+
 
     for(int i = 0; i < 2; i++){
         std::cout << std::endl;
@@ -19,5 +18,4 @@ int main(){
             std::cout << " " << mR[i][c];
         }
     }
-
 }
