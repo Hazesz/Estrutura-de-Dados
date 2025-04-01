@@ -11,7 +11,7 @@ int main(){
             std::cin >> matriz[line][colum];
         }
     }
-    //ajustar pra fazer por coluna
+
     for(colum = 0; colum < 4; colum++){
         soma = 0;
         for(line = 0; line < 3; line++){
