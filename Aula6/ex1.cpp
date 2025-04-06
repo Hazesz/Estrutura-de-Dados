@@ -11,13 +11,13 @@ class Pilha{
         vert* topo;
 
     public:
-        Pilha() : topo(nullptr){}
+        Pilha() : topo(nullptr){} //pilha começa vazia
     
     void push(int valor){
-        vert* new_vert = new vert;
-        new_vert -> dados = valor;
-        new_vert -> prox = topo;
-        topo = new_vert;
+        vert* new_vert = new vert;  //cria um novo nó
+        new_vert -> dados = valor;  //atribui o valor recebido
+        new_vert -> prox = topo;    //nó novo aponta pro nó topo
+        topo = new_vert;    //topo vira o novo nó
     }
     
     int pop(){
@@ -25,11 +25,11 @@ class Pilha{
             cout << "Stack Underflow" << endl;
             return -1;
         }
-        int valor = topo -> dados;
-        vert* temp = topo;
-        topo = topo -> prox;
-        delete temp;
-        return valor;
+        int valor = topo -> dados; //guarda o valor do topo
+        vert* temp = topo;  
+        topo = topo -> prox;    //move o topo para frente
+        delete temp;    //deleta o antigo topo
+        return valor;   //retorna valor removido
     }
 
     bool isEmpty() const{
@@ -38,7 +38,7 @@ class Pilha{
 
     ~Pilha(){
         while(!isEmpty()){
-            pop();
+            pop();  //libera toda a memória
         }
     }
 };
