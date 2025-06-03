@@ -7,7 +7,7 @@
         std :: vector<int> indc;
         for(int i = 0; i < tam; i++){
             if(key == arr[i]){ 
-                indc.push_back(i);
+                indc.push_back(i); //push_back() manda o elemento capturado para a pilha do vetor
             }
         }
         return indc;
