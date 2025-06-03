@@ -19,7 +19,7 @@ int buscaBinaria(std::vector<int> arr, int key){
             inicio = meio + 1;
         }
     }
-    return inicio;
+    return inicio; //o algoritmo vai achar a posição onde o elemento deve ser inserido e vai retornar essa posicao encontrada
 }
 
 int main(){
@@ -29,7 +29,7 @@ int main(){
     int pos = buscaBinaria(arr, key);
     std::cout << "Inserir: " << key << "\nposicao: " << pos << "\n";
 
-    arr.insert(arr.begin() + pos, key);
+    arr.insert(arr.begin() + pos, key); //vai inserir o valor no inicio do array + posicao que vai ser inserida
 
     for(int& i : arr){
         std::cout << i << " ";
